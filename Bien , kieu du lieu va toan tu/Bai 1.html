@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh diem trung binh</title>
+</head>
+<body>
+<script>
+
+  let diemVatLy = parseFloat(prompt("Nhập điểm Vật lý: "));
+  let diemHoaHoc = parseFloat(prompt("Nhập điểm Hóa học: "));
+  let diemSinhHoc = parseFloat(prompt("Nhập điểm Sinh học: "));
+
+  let tongDiem = diemVatLy + diemHoaHoc + diemSinhHoc;
+
+  let diemTrungBinh = tongDiem / 3;
+
+  console.log(`Tổng điểm: ${tongDiem}`);
+  console.log(`Điểm trung bình: ${diemTrungBinh.toFixed(2)}`);
+</script>
+</body>
+</html>
