@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhap so canh a: ");
+  let b = +prompt("Nhap so canh b: ");
+  function tinhDienTichTamGiacVuong(a, b) {
+    if (a <= 0 || b <= 0) {
+      console.log("Canh a va b phai la so duong.");
+    } else {
+      let dienTich = (a * b) / 2;
+      console.log("Dien tich tam giac vuong la: " + dienTich);
+    }
+  }
+  tinhDienTichTamGiacVuong(a, b); 
+</script>
+</body>
+</html>

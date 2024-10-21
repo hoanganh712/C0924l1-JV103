@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhap mot so duong a: ");
+  let b = +prompt("Nhap mot so duong b: ");
+
+  function tinhDienTichHinhChuNhat(a, b) {
+    if (a <= 0 || b <= 0) {
+      console.log("Hai canh a va b phai la so duong.");
+    } else {
+      let dienTich = a * b;
+      console.log("Dien tich hinh chu nhat la: " + dienTich);
+    }
+  }
+  tinhDienTichHinhChuNhat(a,b);
+</script>
+</body>
+</html>

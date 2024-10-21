@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = +prompt("Nhap mot so: ");
+
+  function chuyenMetsangFeet(Met) {
+    if (Met < 0) {
+      console.log("Gia tri khong hop le . Vui long nhap mot so");
+    } else {
+      let feet = Met * 3.2808;
+      console.log(Met + " met bang " + feet +" feet.");
+    }
+  }
+  // Vi du
+  chuyenMetsangFeet(numbers)
+
+</script>
+</body>
+</html>

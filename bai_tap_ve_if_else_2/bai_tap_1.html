@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = +prompt("Nhap mot so: ");
+
+  function chuyendoiDoCthanhDoF(doC) {
+    if (typeof doC !== "number") {
+      console.log("Gia tri khong hop le . Vui long nhap mot so.");
+    } else {
+      let doF = doC * 9 / 5 + 32;
+      console.log(doC + "°C tuong duong voi " + doF + "°F.");
+    }
+  }
+  // Vi du: Chuyen doi doC sang doF
+  chuyendoiDoCthanhDoF(numbers);
+
+</script>
+</body>
+</html>
