@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function sum20sodtFibonacci(n) {
+    let a = 0 , b = 1;
+    sum = a + b;
+    for (let i = 3; i <= n; i ++) {
+    next = a + b;
+    sum += next;
+    a = b;
+    b = next;
+    }
+
+    return sum;
+  }
+  let result = sum20sodtFibonacci(20);
+  console.log("Tong 20 so dau tien trong day Fibonacci la: " , result);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+let nhietdo = +prompt("Nhiet do hien tai: ");
+
+    if (nhietdo > 100) {
+     nhietdo = +prompt("Yeu cau giam nhiet do");
+   } else if (nhietdo < 20) {
+      nhietdo = +prompt("Yeu cau tang nhiet do");
+    }
+    while (nhietdo > 100 || nhietdo < 20);
+
+   alert("Nhiet do hop ly: " + nhietdo);
+
+   console.log("Ket thuc chuong trinh");
+</script>
+</body>
+</html>
