@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [2, 3, 5, 6, 7, 11, 13];
+  let v = prompt("Nhap so can xoa: ");
+  for (let i = 0; i < array.length; i++) {
+    if (v == array[i]) {
+      for (let j = 0; j < array.length-1; j++) {
+        array[j] = array[j+1];
+      }
+      array[array.length-1]=0;
+      i--;
+    }
+  }
+  alert(array);
+</script>
+</body>
+</html>
