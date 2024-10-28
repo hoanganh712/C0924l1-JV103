@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [9, 6, 3, 5, 10, 15, 2, 4, 8];
+  let maxValue = array[0];
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    if (array[i] > maxValue) {
+      maxValue = array[i];
+    }
+  }
+  let average = sum / array.length;
+
+  console.log("Gia tri lon nhat trong mang: ", maxValue);
+  console.log("Gia tri trung binh cua phan tu: ", average);
+</script>
+</body>
+</html>

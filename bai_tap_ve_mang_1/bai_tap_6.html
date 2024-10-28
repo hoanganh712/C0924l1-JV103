@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    let element = parseInt(prompt(`Nhap phan tu ${i + 1}:`), 10);
+    array.push(element);
+  }
+  let V = parseInt(prompt("Nhap gai tri cua V: "), 10);
+  if (array.includes(V)) {
+    console.log("${V} is in the array" );
+  } else {
+    console.log("${V} is not in the array");
+  }
+</script>
+</body>
+</html>
