@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function countWord(str) {
+    if (str.trim() === "") return 0;
+    let wordsArray = str.trim().split(/\s+/);
+    return wordsArray.length;
+  }
+  let sentence = prompt("Day la mot tu: ");
+  console.log(countWord(sentence));
+</script>
+</body>
+</html>

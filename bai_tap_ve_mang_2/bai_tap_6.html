@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <script>
+    let charArray = ['a', '-', 'b', '-', 'c', '-', 'd'];
+    function replace(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === '-') {
+          arr[i] = '_';
+        }
+      }
+      return arr;
+    }
+    console.log("Mang sau khi thay the: ", replace(charArray))
+  </script>
+</body>
+</html>
