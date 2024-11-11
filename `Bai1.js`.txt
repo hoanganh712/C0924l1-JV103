@@ -1,0 +1,68 @@
+function inputArray() {
+    const n = parseInt(prompt("Nhập số lượng phần tử của mảng (n <= 20):"));
+    if (n > 20 || n <= 0) {
+        alert("Số lượng phần tử phải lớn hơn 0 và không vượt quá 20.");
+        return;
+    }
+
+    const array = [];
+    for (let i = 0; i < n; i++) {
+        const value = parseFloat(prompt(`Nhập phần tử thứ ${i + 1}:`));
+        
+        if (isNaN(value)) {
+            alert("Giá trị không hợp lệ. Vui lòng nhập một số.");
+            i--; 
+        } else {
+            array.push(value);
+        }
+    }
+     console.log("Mảng đã nhập là:", array);
+     
+     checkArray(array);
+     checkIncreasing(array); 
+    
+    while (true) {
+        const newValue = prompt("Nhập phần tử mới để thêm vào mảng (hoặc nhấn Cancel để dừng):");
+        if (newValue === null) {
+            break; 
+        }
+        const newNum = parseFloat(newValue);
+        if (isNaN(newNum)) {
+            alert("Giá trị không hợp lệ. Vui lòng nhập một số.");
+        } else {
+            array.push(newNum);
+            console.log("Mảng sau khi thêm phần tử mới là:", array);
+            checkArray(array); 
+            checkIncreasing(array); 
+    }
+}
+    function checkArray(array) {
+    if (array.length === 0) {
+        console.log("Mảng rỗng.");
+    } else {
+        console.log(`Mảng có ${array.length} phần tử.`);
+        console.log("Các phần tử trong mảng là:", array);
+        console.log("Giá trị lớn nhất trong mảng:", Math.max(...array));
+        console.log("Giá trị nhỏ nhất trong mảng:", Math.min(...array));
+    }
+}  
+
+
+    function checkIncreasing(array) {
+    if (array.length < 2) {
+        console.log("Mảng có ít hơn 2 phần tử, không thể kiểm tra.");
+        return;
+    }
+
+    const difference = array[1] - array[0]; 
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] - array[i - 1] !== difference) {
+            console.log("NO"); 
+            return;
+        }
+    }
+
+    console.log("OK"); 
+}
+   inputArray();
