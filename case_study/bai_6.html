@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function checkArray(arr) {
+    if (arr.length === 0) {
+      return -1;
+    }
+    if (arr.every(x => x % 2 === 0)){
+      return  1;
+    }
+    if (arr.every(x => x % 2 !== 0)) {
+      return 0;
+    }
+    return -1;
+  }
+
+  console.log(checkArray([4, 6, 8]));
+  console.log(checkArray([3, 5, 7]));
+  console.log(checkArray([]));
+</script>
+</body>
+</html>
