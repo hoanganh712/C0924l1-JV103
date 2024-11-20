@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số ngày trong tháng</h1>
+<table border="1">
+  <tr>
+    <th>Tháng</th>
+    <th>Năm</th>
+    <th>Kết quả</th>
+  </tr>
+  <tr>
+    <td><input type="number" id="inputMonth" min="1" max="12" placeholder="MM"></td>
+    <td><input type="number" id="inputYear" placeholder="YYYY"></td>
+    <td><span id="result"></span></td>
+  </tr>
+</table>
+<br>
+<button onclick="checkMonthAndYear()">Kiểm tra</button>
+
+<script>
+  function isLeapYear(year) {
+    if (year % 4 === 0) {
+      if (year % 100 === 0) {
+        if (year % 400 === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+  function getDaysInMonth(month, year) {
+    if (month < 1 || month > 12) {
+      return "Tháng không hợp lệ";
+    }
+
+    var days;
+    if (month === 2) {
+      if (isLeapYear(year)) {
+        days = 29;
+      } else {
+        days = 28;
+      }
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+      days = 30;
+    } else {
+      days = 31;
+    }
+    return days;
+  }
+  function checkMonthAndYear() {
+    var month = document.getElementById("inputMonth").value;
+    var year = document.getElementById("inputYear").value;
+
+    var days = getDaysInMonth(parseInt(month), parseInt(year));
+    document.getElementById("result").innerText = "Tháng " + month + "/" + year + " có " + days + " ngày.";
+  }
+</script>
+</body>
+</html>

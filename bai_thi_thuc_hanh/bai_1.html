@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var arr = [];
+  function addElement(element) {
+    if (arr.length < 50) {
+      arr.push(element);
+    } else {
+      console.log("Số lượng phần tử không vượt quá 50.");
+    }
+  }
+  function displayArray() {
+    var arrayString = "Mảng hiện tại: ";
+    for (var i = 0; i < arr.length; i++) {
+      arrayString += arr[i];
+      if (i < arr.length - 1) {
+         arrayString += ", ";
+      }
+    }
+    console.log(arrayString);
+  }
+  function averageDivisibleBy3() {
+    var sum = 0;
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+       if (arr[i] % 3 === 0) {
+         sum += arr[i];
+         count++;
+       }
+    }
+    if (count === 0) {
+      return 0;
+    }
+    return sum / count;
+  }
+  addElement(3);
+  addElement(6);
+  addElement(9);
+  addElement(12);
+  addElement(15);
+  addElement(18);
+  addElement(21);
+  addElement(24);
+
+  displayArray();
+  console.log("Trung bình cộng chia hết cho 3: " + averageDivisibleBy3());
+</script>
+</body>
+</html>

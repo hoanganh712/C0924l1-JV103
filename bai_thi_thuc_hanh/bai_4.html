@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  class CongNhan {
+    constructor(stt, hoTen, ngaySinh, diaChi, luong, chucVu) {
+      this.stt = stt;
+      this.hoTen = hoTen;
+      this.ngaySinh = ngaySinh;
+      this.diaChi = diaChi;
+      this.luong = luong;
+      this.chucVu = chucVu;
+    }
+  }
+  let danhSachCongNhan = [
+    new CongNhan(1, "Nguyen Van Anh", "01/01/1990", "Ha Noi", 5000000, "Cong nhan"),
+    new CongNhan(2, "Le Van Thanh", "01/02/1985", "Hai Phong", 6000000, "Quan doi"),
+    new CongNhan(3, "Tran Van Cong", "01/03/1992", "Da Nang", 4500000, "Cong nhan"),
+  ];
+  function sapXepDanhSach() {
+    danhSachCongNhan.sort((a, b) => {
+      let tenA = a.hoTen;
+      let tenB = b.hoTen;
+    }
+  }
+
+</script>
+</body>
+</html>
